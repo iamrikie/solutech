@@ -23,11 +23,9 @@ return new class extends Migration
             $table->timestamp('end_time')->nullable();
             $table->string('remarks', 255)->nullable();
             $table->unsignedBigInteger('status_id')->nullable();
-            //$table->unsignedBigInteger('status_id')->nullable()->default(null);
-
             $table->timestamps();
-            // $table->dropSoftDeletes(); //if we ever need need to implement soft deletes
             $table->timestamp('deleted_at')->nullable();
+            // $table->dropSoftDeletes(); //if we ever need need to implement soft deletes
     
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
