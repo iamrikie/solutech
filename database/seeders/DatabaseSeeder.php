@@ -21,8 +21,6 @@ class DatabaseSeeder extends Seeder
     {
         $faker = FakerFactory::create();
         $faker->addProvider(new StatusProvider($faker));
-        //$faker->addProvider(new CustomFakerProvider($faker));
-        //$faker->addProvider(new \App\Providers\StatusProvider($faker));
 
         User::factory(10)->create();
 
