@@ -24,18 +24,19 @@ Follow the steps below to set up the project on your local machine.
 - A local development environment such as XAMPP, MAMP, or WAMP
 
 #Installing
-- Clone the repository using git clone https://github.com/your-username/project-name.git.
-- Navigate to the project directory using cd project-name.
+- Clone the repository using git clone https://github.com/iamrikie/solutech.git.
+- Navigate to the project directory using cd solutech.
 - Install the required dependencies using composer install.
 - Copy the .env.example file to .env using cp .env.example .env.
 - Generate a new application key using php artisan key:generate.
 - Configure the database connection in the .env file.
-- Migrate the database tables using php artisan migrate.
+- Migrate the database tables and seeders using php artisan migrate --seed.
 - Start the development server using php artisan serve.
 
 #Usage
+- You may use Postman to test the APIs
 - Access the application by visiting http://localhost:8000 in your web browser.
-[Add any additional instructions for how to use the application here.]
+
 
 
 ## Built With
