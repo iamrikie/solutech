@@ -21,12 +21,8 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            //$table->string('name'); //my addition
-            $table->string('email_address', 100)->unique();
+            $table->string('email', 100)->unique();
             $table->string('password', 100);
-            // $table->timestamp('created_at')->nullable();
-            // $table->timestamp('updated_at')->nullable();
-            // $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
   
