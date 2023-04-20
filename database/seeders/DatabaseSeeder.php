@@ -2,8 +2,15 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Database\Seeders\TaskSeeder;
+use App\Providers\StatusProvider;
+use Database\Seeders\StatusSeeder;
+use Faker\Factory as FakerFactory;
+use Database\Seeders\UserTaskSeeder;
+use Database\Factories\StatusFactory;
+use App\Providers\CustomFakerProvider;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +19,24 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $faker = FakerFactory::create();
+        $faker->addProvider(new StatusProvider($faker));
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory(10)->create();
+
+        User::factory()->create([
+            'name' => 'ian',
+            'email_address' => 'ian@example.com',
+        ]);
+
+        // Register factories
+        StatusFactory::new();
+
+        // Seeders
+        $this->call([
+            StatusSeeder::class,
+            TaskSeeder::class,
+            UserTaskSeeder::class,
+        ]);
     }
 }

@@ -23,7 +23,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->string('description', 255);
+            $table->string('description', 500)->nullable();
             $table->timestamp('due_date')->nullable();
             $table->unsignedBigInteger('status_id');
             $table->timestamps();
