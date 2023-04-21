@@ -23,10 +23,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+//Login / Register / Logout routes
+Route::prefix('v1')->group(function () {
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/register', [AuthController::class, 'register']);
+    Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+});
 
-
+//I have added authentication middleware to the routes, to ensure that the user is authenticated before allowing access to the API routes. 
 Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('v1')->group(function () {
         Route::apiResource('/users', UserController::class);

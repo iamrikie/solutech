@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'ian',
-            'email_address' => 'ian@example.com',
+            'email' => 'ian@example.com',
         ]);
 
         // Register factories
