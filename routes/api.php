@@ -19,9 +19,9 @@ use App\Http\Controllers\ApI\V1\AuthController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 //Login / Register / Logout routes
 Route::prefix('v1')->group(function () {
