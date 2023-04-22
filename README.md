@@ -68,7 +68,7 @@ Follow the steps below to set up the project on your local machine.
                     {<br>
                          "email": "ian@example.com",<br>
                          "password": "Password123"<br> 
-                    }
+                    }<br>
                     <b>Note:</b><i> Your pass has to be a minimum of 8 characters to be validated as I have defined in the AuthController.</i>
        </p></pre>
 With that example, proceed testing the remaining endpoints.
