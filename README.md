@@ -13,16 +13,21 @@
 
 
 # Solutech
-This is a Laravel test project.
+This is a Laravel backend test project.
 
+
+<br><br>
 ### Getting Started
 Follow the steps below to set up the project on your local machine.
 
+<br>
 #Prerequisites
 - PHP 8.1 or later
 - Composer
 - A local development environment such as XAMPP, MAMP, or WAMP
 
+
+<br><br>
 #Installing
 - Clone the repository using git clone https://github.com/iamrikie/solutech.git.
 - Navigate to the project directory using cd solutech.
@@ -33,16 +38,41 @@ Follow the steps below to set up the project on your local machine.
 - Migrate the database tables and seeders using php artisan migrate --seed.
 - Start the development server using php artisan serve.
 
+
+<br><br>
 #Usage
 - You may use Postman to test the APIs. You may use the collections I used to test or you could create your own. Use http://127.0.0.1:8000/api/v1/...  url to test
 - Access the application by visiting http://localhost:8000 in your web browser.
 
 
+<br><br>
+## Endpoints Testing
+#Steps
+- Create a Collection and give it a name eg. Solutech
+- Create folders under the collection you've created to group endpoints based on the kind of       payload each carry.  e.g. Task endpoint, Status endpoints, UserTask endpoints, Users endpoint,   Auth endpoints.
+- Create requests under each folder you've created. e.g.
+      <pre><p>GET - Retrieve Tasks -  http://127.0.0.1:8000/api/v1/tasks</p>
+        <p>POST - Add Tasks -  http://127.0.0.1:8000/api/v1/tasks</p>
+        <p>GET - Retrieve Tasks By Id -  http://127.0.0.1:8000/api/v1/tasks/3</p>
+        <p>PUT - Update task -  http://127.0.0.1:8000/api/v1/tasks/4</p>
+        <p>DELETE - Delete task -  http://127.0.0.1:8000/api/v1/tasks/5</p>
+        <p>POST - Login -  http://127.0.0.1:8000/api/v1/login <br>
+        - Set Auth type "Bearer Token"   Note that you'll be required to enter a Token <br>
+        - Set Key "Content_Type" and Value "application/json"  <br>
+        - On the "Body" tab select the "raw" option, and enter the login credentials in JSON format.<br> For example:<br>
+                    {<br>
+                         "email": "ian@example.com",<br>
+                         "password": "Password123"<br>
+                    }
+       </p></pre>
+With that example, proceed testing the remaining endpoints.
 
+
+
+
+<br><br>
 ## Built With
 Laravel [v10]
-[Add any additional dependencies used in the project here.]
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
