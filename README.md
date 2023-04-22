@@ -67,6 +67,8 @@ Follow the steps below to set up the project on your local machine.
        </p></pre>
 With that example, proceed testing the remaining endpoints.
 
+<br><br>
+<b>Ps: </b><b><i>Code Optimization in Progress...</i><b>
 
 
 
