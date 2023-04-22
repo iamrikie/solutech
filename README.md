@@ -28,6 +28,7 @@ Follow the steps below to set up the project on your local machine.
 - PHP 8.1 or later
 - Composer
 - A local development environment such as XAMPP, MAMP, or WAMP
+- API Platform for software testing such as Postman, or Insomnia
 
 
 <br><br>
