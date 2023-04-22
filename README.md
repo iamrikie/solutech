@@ -53,7 +53,7 @@ Follow the steps below to set up the project on your local machine.
 ## Endpoints Testing
 #Steps
 - Create a Collection and give it a name eg. Solutech
-- Create folders under the collection you've created to group endpoints based on the kind of       payload each carry.  e.g. Task endpoint, Status endpoints, UserTask endpoints, Users endpoint,   Auth endpoints.<br>
+- Create folders under the collection you've created to group endpoints based on the kind of       payload each handle.  e.g. Task endpoint, Status endpoints, UserTask endpoints, Users endpoint,   Auth endpoints.<br>
 
 - Create requests under each folder you've created. e.g.
       <pre><p>GET - Retrieve Tasks -  http://127.0.0.1:8000/api/v1/tasks</p>
