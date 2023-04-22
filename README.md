@@ -41,8 +41,9 @@ Follow the steps below to set up the project on your local machine.
 
 <br><br>
 #Usage
-- You may use Postman to test the APIs. You may use the collections I used to test or you could create your own. Use http://127.0.0.1:8000/api/v1/...  url to test
 - Access the application by visiting http://localhost:8000 in your web browser.
+- You may use Postman to test the APIs. You may use the collection I used to test(I may share them) or you could create your own. Use http://127.0.0.1:8000/api/v1/...  url to test
+
 
 
 <br><br>
