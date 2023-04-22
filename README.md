@@ -67,8 +67,9 @@ Follow the steps below to set up the project on your local machine.
         - On the "Body" tab select the "raw" option, and enter the login credentials in JSON format.<br> For example:<br>
                     {<br>
                          "email": "ian@example.com",<br>
-                         "password": "Password123"<br>
+                         "password": "Password123"<br> 
                     }
+                    <b>Note:</b><i> Your pass has to be a minimum of 8 characters to be validated as I have defined in the AuthController.</i>
        </p></pre>
 With that example, proceed testing the remaining endpoints.
 
