@@ -13,7 +13,10 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index', compact('users'));
+        return response()->json([
+            'success' => true,
+            'data' => $users
+        ], 200);
     }
 
     public function create()
@@ -33,7 +36,10 @@ class UserController extends Controller
 
         $user = User::create($validatedData);
 
-        return redirect()->route('users.index')->with('success', 'User created successfully.');
+        return response()->json([
+            'success' => true,
+            'data' => $user
+        ], 201);
     }
 
     public function edit(User $user)
@@ -49,7 +55,7 @@ class UserController extends Controller
             'password' => ['nullable', 'confirmed', Password::min(8)->mixedCase()->numbers()],
         ]);
 
-        if (isset($validatedData['password'])) {
+        if (!empty($validatedData['password'])) {
             $validatedData['password'] = Hash::make($validatedData['password']);
         } else {
             unset($validatedData['password']);
@@ -57,13 +63,19 @@ class UserController extends Controller
 
         $user->update($validatedData);
 
-        return redirect()->route('users.index')->with('success', 'User updated successfully.');
+        return response()->json([
+            'success' => true,
+            'data' => $user
+        ], 200);
     }
 
     public function destroy(User $user)
     {
         $user->delete();
 
-        return redirect()->route('users.index')->with('success', 'User deleted successfully.');
+        return response()->json([
+            'success' => true,
+            'message' => 'User deleted successfully'
+        ], 204);
     }
 }
