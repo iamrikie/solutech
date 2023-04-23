@@ -64,6 +64,7 @@ Follow the steps below to set up the project on your local machine.
         <p>DELETE - Delete task -  http://127.0.0.1:8000/api/v1/tasks/5</p>
         <p>POST - Login -  http://127.0.0.1:8000/api/v1/login <br>
         - Set Key "Content_Type" and Value "application/json"  <br>
+        - you don't need to provide a token to login or register, but you will need to provide a valid token to log out. <br>
         - On the "Body" tab select the "raw" option, and enter the login credentials in JSON format.<br> For example:<br>
                     {<br>
                          "email": "ian@example.com",<br>
