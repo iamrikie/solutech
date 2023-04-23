@@ -73,7 +73,7 @@ Follow the steps below to set up the project on your local machine.
                     }<br>
                     <b>Note:</b><i> Your pass has to be a minimum of 8 characters to be validated as I have defined in the AuthController.</i>
        </p></pre>
-With that example, proceed testing the remaining endpoints. Check the api Routes for better understanding on how to proceed.
+With that example, proceed testing the remaining endpoints. Check the api Routes for a better understanding on how to proceed.
 
 <br><br>
 <b>Ps: </b><b><i>Code Optimization in Progress...</i><b>
