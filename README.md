@@ -90,5 +90,7 @@ Laravel [v10]
 <br><br><br>
 An example of my api test, - showing relationship between users, tasks, and status as per the ERD, <br>
 
-![Screenshot 2023-04-23 122123](https://user-images.githubusercontent.com/56028045/233861073-b1fed9d0-2130-41be-84be-c9a01c4866c3.png)
+![Screenshot 2023-04-23 122123](https://user-images.githubusercontent.com/56028045/233861073-b1fed9d0-2130-41be-84be-c9a01c4866c3.png) <br>
+
+![Screenshot 2023-04-23 122221](https://user-images.githubusercontent.com/56028045/233861846-2786d436-74b6-443c-bf4f-09509f82e788.png)
 
