@@ -63,7 +63,6 @@ Follow the steps below to set up the project on your local machine.
         <p>PUT - Update task -  http://127.0.0.1:8000/api/v1/tasks/4</p>
         <p>DELETE - Delete task -  http://127.0.0.1:8000/api/v1/tasks/5</p>
         <p>POST - Login -  http://127.0.0.1:8000/api/v1/login <br>
-        - Set Auth type "Bearer Token"   Note that you'll be required to enter a Token <br>
         - Set Key "Content_Type" and Value "application/json"  <br>
         - On the "Body" tab select the "raw" option, and enter the login credentials in JSON format.<br> For example:<br>
                     {<br>
