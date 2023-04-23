@@ -64,7 +64,8 @@ Follow the steps below to set up the project on your local machine.
         <p>DELETE - Delete task -  http://127.0.0.1:8000/api/v1/tasks/5</p>
         <p>POST - Login -  http://127.0.0.1:8000/api/v1/login <br>
         - Set Key "Content_Type" and Value "application/json"  <br>
-        - you don't need to provide a token to login or register, but you will need to provide a valid token to log out. <br>
+        - You don't need to provide a token to login or register, but you will need to provide a valid token to log out. <br>
+        - To generate a valid token, you may use laravel tinker, (run "<b><i>php artisan tinker</i></b>" on your terminal to start the tinker cli - Then type the next command "<b><i>$user = \User::first();</i></b>" That will return user id: 1 data. Proceed to the next command, "<b><i>$user->createToken('put-any-name-here');</i></b>" - That will generate a token. Copy paste it on postman.<br>
         - On the "Body" tab select the "raw" option, and enter the login credentials in JSON format.<br> For example:<br>
                     {<br>
                          "email": "ian@example.com",<br>
