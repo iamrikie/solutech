@@ -88,7 +88,7 @@ Laravel [v10]
 
 
 <br><br><br>
-An example of my api test, - showing relationship between users, tasks, and status as per the ERD, <br>
+<b><i>The results of the API testing below illustrate both the interrelation between users, tasks, and status and the sequence of events in compliance with the provided Entity-Relationship Diagram (ERD).</i></b> <br>
 
 ![Screenshot 2023-04-23 122123](https://user-images.githubusercontent.com/56028045/233861073-b1fed9d0-2130-41be-84be-c9a01c4866c3.png) <br>
 
@@ -96,5 +96,7 @@ An example of my api test, - showing relationship between users, tasks, and stat
 
 ![Screenshot 2023-04-23 155620](https://user-images.githubusercontent.com/56028045/233862063-733f90d9-9ae3-4d75-ac17-79e043b266ba.png) <br>
 
-![Screenshot 2023-04-23 121816](https://user-images.githubusercontent.com/56028045/233862209-d2a66f87-11d5-490c-9315-9e016adfece3.png)
+![Screenshot 2023-04-23 121816](https://user-images.githubusercontent.com/56028045/233862209-d2a66f87-11d5-490c-9315-9e016adfece3.png) <br>
+
+![Screenshot 2023-04-23 121948](https://user-images.githubusercontent.com/56028045/233862564-85679675-3b27-470d-af79-242e92d5ad0a.png)
 
