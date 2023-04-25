@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -12,41 +13,43 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-
-            if (!$user->email_verified_at) {
-                Auth::logout();
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Your email address is not verified'
-                ], 403);
-            }
-
-            if (!$user->is_admin) {
-                Auth::logout();
-                return response()->json([
-                    'success' => false,
-                    'message' => 'You don\'t have permission to authenticate as admin'
-                ], 403);
-            }
-
-            $token = $user->createToken('auth_token')->plainTextToken;
-
+        $credentials = $request->validate([
+            'email'=> ['required', 'email'],
+            'password' => 'required',
+            'remember' => 'boolean'
+        ]);
+        $remember = $credentials['remember'] ?? false;
+        unset($credentials['remember']);
+        if (!Auth::attempt($credentials, $remember)) {
             return response()->json([
-                'success' => true,
-                'message' => 'Login successful',
-                'access_token' => $token,
-                'token_type' => 'Bearer',
-            ]);
+                'message' => 'Email or password is incorrect'
+            ], 422);
         }
 
+        /** @var \App\Models\User $user */
+        $user = Auth::user();
+        if (!$user->is_admin) {
+            Auth::logout();
+            return response()->json([
+                'message' => 'You don\'t have permission to authenticate as admin'
+            ], 403);
+        }
+        if (!$user->email_verified_at) {
+            Auth::logout();
+            return response()->json([
+                'message' => 'Your email address is not verified'
+            ], 403);
+        }
+        $token = $user->createToken('auth_token')->plainTextToken;
+
         return response()->json([
-            'success' => false,
-            'message' => 'Email or password is incorrect'
-        ], 401);
+        'success' => true,
+        'message' => 'Login successful',
+        'user' => new UserResource($user),
+        'token' => $token,
+        'token_type' => 'Bearer',
+        ], 201);
+
     }
 
     public function register(Request $request)
@@ -83,5 +86,10 @@ class AuthController extends Controller
             'success' => true,
             'message' => 'Logout successful'
         ]);
+    }
+
+    public function getUser(Request $request)
+    {
+        return new UserResource($request->user());
     }
 }

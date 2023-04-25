@@ -7,16 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
+use App\Http\Resources\UserResource;
 
 class UserController extends Controller
 {
     public function index()
     {
         $users = User::all();
-        return response()->json([
-            'success' => true,
-            'data' => $users
-        ], 200);
+        return UserResource::collection($users);
     }
 
     public function create()
@@ -41,10 +39,7 @@ class UserController extends Controller
 
         $user = User::create($validatedData);
 
-        return response()->json([
-            'success' => true,
-            'data' => $user
-        ], 201);
+        return new UserResource($user);
     }
 
     public function edit(User $user)
@@ -68,10 +63,7 @@ class UserController extends Controller
 
         $user->update($validatedData);
 
-        return response()->json([
-            'success' => true,
-            'data' => $user
-        ], 200);
+        return new UserResource($user);
     }
 
     public function destroy(User $user)
