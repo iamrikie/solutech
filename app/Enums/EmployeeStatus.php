@@ -1,19 +1,21 @@
 <?php
-/**
- * User: Zura
- * Date: 9/17/2022
- * Time: 6:34 AM
- */
+
 
 namespace App\Enums;
 
 
-/**
- * Class CustomerStatus
- *
- * @author  Zura Sekhniashvili <zurasekhniashvili@gmail.com>
- * @package App\Enums
- */
+/* 
+
+- Preserving this to futher improve distribution of tasks among 
+different types of users and for a start Employees 
+
+- So I will update my tables and have Employees table who can be either 
+active(they can be assigned tasks) or inactive (They cant be assigned tasks)
+
+- makes the project make more sense that way.
+
+*/
+
 enum EmployeeStatus: string
 {
     case Active = 'active';
