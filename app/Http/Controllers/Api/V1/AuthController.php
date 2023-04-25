@@ -15,17 +15,37 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            // $request->session()->regenerate();
+            $user = Auth::user();
+
+            if (!$user->email_verified_at) {
+                Auth::logout();
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Your email address is not verified'
+                ], 403);
+            }
+
+            if (!$user->is_admin) {
+                Auth::logout();
+                return response()->json([
+                    'success' => false,
+                    'message' => 'You don\'t have permission to authenticate as admin'
+                ], 403);
+            }
+
+            $token = $user->createToken('auth_token')->plainTextToken;
 
             return response()->json([
                 'success' => true,
-                'message' => 'Login successful'
+                'message' => 'Login successful',
+                'access_token' => $token,
+                'token_type' => 'Bearer',
             ]);
         }
 
         return response()->json([
             'success' => false,
-            'message' => 'Invalid credentials'
+            'message' => 'Email or password is incorrect'
         ], 401);
     }
 

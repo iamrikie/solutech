@@ -32,6 +32,11 @@ class UserController extends Controller
             'password' => ['required', 'confirmed', Password::min(8)->mixedCase()->numbers()],
         ]);
 
+        // Add is_admin feature - only admin can create an admin user
+        if ($request->user()->is_admin && $request->has('is_admin')) {
+            $validatedData['is_admin'] = (bool)$request->input('is_admin');
+        }
+
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         $user = User::create($validatedData);

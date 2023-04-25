@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
 
         // Seeders
         $this->call([
+            AdminUserSeeder::class,
             StatusSeeder::class,
             TaskSeeder::class,
             UserTaskSeeder::class,
