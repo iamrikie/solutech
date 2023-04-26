@@ -104,5 +104,13 @@ Laravel [v10]
 
 ![Screenshot 2023-04-23 233711](https://user-images.githubusercontent.com/56028045/233865105-d6d840cd-8354-4ee1-bf59-637ce1d883b2.png) <br>
 
-![Screenshot 2023-04-23 235049](https://user-images.githubusercontent.com/56028045/233865632-52c8674a-f6f0-4cd2-9034-39e8715ddd05.png)
+![Screenshot 2023-04-23 235049](https://user-images.githubusercontent.com/56028045/233865632-52c8674a-f6f0-4cd2-9034-39e8715ddd05.png) <br>
+
+![image](https://user-images.githubusercontent.com/56028045/234571333-6bdee975-f549-4dd1-bd33-0714ff375a79.png) <br>
+
+![image](https://user-images.githubusercontent.com/56028045/234571780-f71936e8-a4b1-4ebe-9639-4c3acaea8019.png) <br>
+
+![image](https://user-images.githubusercontent.com/56028045/234573774-e923c990-ed58-44f5-a0ac-f9aa024b07c0.png)
+
+
 
