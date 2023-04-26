@@ -105,7 +105,9 @@ Laravel [v10]
 ![Screenshot 2023-04-23 233711](https://user-images.githubusercontent.com/56028045/233865105-d6d840cd-8354-4ee1-bf59-637ce1d883b2.png) <br>
 
 ![Screenshot 2023-04-23 235049](https://user-images.githubusercontent.com/56028045/233865632-52c8674a-f6f0-4cd2-9034-39e8715ddd05.png) <br>
-   From this point, I added functionalities for administrators, allowing them to register new users and assign tasks exclusively to regular users, among other capabilities that they could perform from their dashboard. Backend not fully implemented for that but that's the idea<br>
+    
+   From this point, I added functionalities for administrators, allowing them to register new users and assign tasks exclusively to regular users, among other capabilities that they could perform from their dashboard. Backend not fully implemented for that but that's the idea <br>
+    
 ![image](https://user-images.githubusercontent.com/56028045/234574803-2b71f619-bbf5-4b94-a48a-fc184819765e.png) <br>
 
 ![image](https://user-images.githubusercontent.com/56028045/234571333-6bdee975-f549-4dd1-bd33-0714ff375a79.png) <br>
